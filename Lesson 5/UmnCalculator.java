@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class AddMinus{
+public class UmnCalculator{
 	public static void main (String[] args){
 	Scanner Bender = new Scanner(System.in);
 	
@@ -12,11 +12,11 @@ public class AddMinus{
 	System.out.println("number 2: ");
 	y = Bender.nextDouble();
 	
-	result = x - y;
+	result = x * y;
 	
-	System.out.println(" result " + result);
-	System.out.println(" AddCalculator");
-		System.out.println(" Oleg Cusursuz");
-			System.out.println(" number1 - number2");
+	System.out.println("result " + result);
+	System.out.println("addCalculator");
+		System.out.println("Oleg Cusursuz");
+			System.out.println("number1 * number2");
 	}
 }
