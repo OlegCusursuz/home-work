@@ -11,13 +11,12 @@ public class Calculator{
 		System.out.println("First number ");
 		fn = Bender.nextDouble();
 		
-		System.out.println("Second number");
-		sn = Bender.nextDouble();
-		
 		Scanner op = new Scanner(System.in);
 		System.out.println("enter operation");
 		simbol = op.next();
 		
+		System.out.println("Second number");
+		sn = Bender.nextDouble();
 		
 		if(simbol.equals("+")){
 			System.out.println("Summa =" + (fn + sn));
