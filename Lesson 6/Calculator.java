@@ -18,20 +18,24 @@ public class Calculator{
 		System.out.println("Second number");
 		sn = Bender.nextDouble();
 		
-		if(simbol.equals("+")){
-			System.out.println("Summa =" + (fn + sn));
-		}
-		if (simbol.equals("-")){
-			System.out.println("Summa =" + (fn - sn));
-		}
-		if (simbol.equals("/")){
-			System.out.println("Summa =" + (fn / sn));
-		}
-		if (simbol.equals("*")){
-	    	System.out.println("Summa =" + (fn * sn));		
-			}
-		if (simbol.equals("%")){
-			System.out.println("Summa =" + (fn % sn));
+		switch(simbol){
+			case "+" :
+			System.out.println("summa = " + (fn + sn));
+			break;
+			case "-" :
+			System.out.println("summa = " + (fn + sn));
+			break;
+			case "*" :
+			System.out.println("summa = " + (fn + sn));
+			break;
+			case "/" :
+			System.out.println("summa = " + (fn + sn));
+			break;
+			case "%" :
+			System.out.println("summa = " + (fn + sn));
+			break;
+			default :
+			System.out.println("Fatal!!!!!!!!!");
 		}
 	}
 	
