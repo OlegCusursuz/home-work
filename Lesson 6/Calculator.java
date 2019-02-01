@@ -23,16 +23,16 @@ public class Calculator{
 			System.out.println("summa = " + (fn + sn));
 			break;
 			case "-" :
-			System.out.println("summa = " + (fn + sn));
+			System.out.println("summa = " + (fn - sn));
 			break;
 			case "*" :
-			System.out.println("summa = " + (fn + sn));
+			System.out.println("summa = " + (fn * sn));
 			break;
 			case "/" :
-			System.out.println("summa = " + (fn + sn));
+			System.out.println("summa = " + (fn / sn));
 			break;
 			case "%" :
-			System.out.println("summa = " + (fn + sn));
+			System.out.println("summa = " + (fn % sn));
 			break;
 			default :
 			System.out.println("Fatal!!!!!!!!!");
