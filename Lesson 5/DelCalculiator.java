@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class DelCalculiator{
 	public static void main (String[] args){
 	Scanner Bender = new Scanner(System.in);
-	System.out.println("addCalculator");
+	System.out.println("shareCalculator");
 	System.out.println("Oleg Cusursuz");
 	System.out.println("number1 / number2");
 	
