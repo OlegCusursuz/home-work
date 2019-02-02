@@ -3,6 +3,9 @@ import java.util.Scanner;
 public class AddCalculator{
 	public static void main (String[] args){
 	Scanner Bender = new Scanner(System.in);
+    System.out.println("addCalculator");
+    System.out.println("Oleg Cusursuz");
+	System.out.println("number1 + number2");
 	
     double x, y, result;
 	
@@ -15,8 +18,6 @@ public class AddCalculator{
 	result = x + y;
 	
 	System.out.println("result " + result);
-	System.out.println("addCalculator");
-		System.out.println("Oleg Cusursuz");
-			System.out.println("number1 + number2");
+
 	}
 }
