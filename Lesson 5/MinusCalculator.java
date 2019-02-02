@@ -3,6 +3,9 @@ import java.util.Scanner;
 public class MinusCalculator{
 	public static void main (String[] args){
 	Scanner Bender = new Scanner(System.in);
+	System.out.println(" AddCalculator");
+	System.out.println(" Oleg Cusursuz");
+	System.out.println(" number1 - number2");
 	
     double x, y, result;
 	
@@ -16,7 +19,7 @@ public class MinusCalculator{
 	
 	System.out.println(" result " + result);
 	System.out.println(" AddCalculator");
-		System.out.println(" Oleg Cusursuz");
-			System.out.println(" number1 - number2");
+	System.out.println(" Oleg Cusursuz");
+	System.out.println(" number1 - number2");
 	}
 }
