@@ -6,8 +6,11 @@ public class Calculator{
 		double fn;
 		double sn;
 		String simbol;
-		
-		
+		boolean exit = true;
+
+		for( ;exit; ){
+
+		 
 		System.out.println("First number ");
 		fn = Bender.nextDouble();
 		
@@ -17,7 +20,7 @@ public class Calculator{
 		
 		System.out.println("Second number");
 		sn = Bender.nextDouble();
-		
+
 		switch(simbol){
 			case "+" :
 			System.out.println("summa = " + (fn + sn));
@@ -37,6 +40,8 @@ public class Calculator{
 			default :
 			System.out.println("Fatal!!!!!!!!!");
 		}
+		}
+		
 	}
 	
 }
