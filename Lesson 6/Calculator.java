@@ -7,9 +7,10 @@ public class Calculator{
 		double sn;
 		String simbol;
 		boolean exit = true;
+		int feadback;
 
 		for( ;exit; ){
-
+		
 		 
 		System.out.println("First number ");
 		fn = Bender.nextDouble();
@@ -39,6 +40,22 @@ public class Calculator{
 			break;
 			default :
 			System.out.println("Fatal!!!!!!!!!");
+		}
+		System.out.println("1: Again");
+		System.out.println("2: Exit");
+		feadback = Bender.nextInt();
+		switch(feadback){
+			case 1:{
+				exit = true;
+			}break;
+			case 2:{
+				exit = false;
+			}break;
+			default:
+				System.out.println("       !!!eror!!! \nnumber not entered correctly ");
+				exit = false;
+			
+			
 		}
 		}
 		
