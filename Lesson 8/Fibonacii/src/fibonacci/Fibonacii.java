@@ -10,7 +10,7 @@ public class Fibonacii {
     public static void main(String[] args) {
         Scanner Bender = new Scanner(System.in);
         System.out.println("What's you number: ");
-        int n0 = 1;
+        int n0 = 0;
         int n1 = 1;
 	int n2;
         int fibonacciTo = Bender.nextInt();
@@ -22,6 +22,7 @@ public class Fibonacii {
 	    n1=n2;
 	}
 	
+       
     }
     
 }
