@@ -21,7 +21,7 @@ public class Fibonacii {
 	    n0=n1;
 	    n1=n2;
 	}
-	System.out.println();
+	
     }
     
 }
