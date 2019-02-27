@@ -43,7 +43,7 @@ public class Manager extends Data {
     public void Shou() {
         System.out.println("Manager:");
         super.Shou();
-        System.out.println("");
+      
     }
 
 }

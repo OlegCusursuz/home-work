@@ -43,7 +43,7 @@ public class Bookkeeper extends Data {
     public void Shou() {
         System.out.println("Bookkeeper:");
         super.Shou();
-        System.out.println("");
+       
     }
 
 }

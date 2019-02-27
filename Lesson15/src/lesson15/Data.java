@@ -2,7 +2,7 @@ package lesson15;
 
 import java.util.Scanner;
 
-public class Data {
+public abstract class Data {
 
     Scanner bender = new Scanner(System.in);
     public String name;
@@ -34,6 +34,7 @@ public class Data {
         this.NameDirthYear();
         this.NameSurnameId();
         this.NumberBloocNumberApartiment();
+        System.out.println("");
     }
 
     public void DispleyName() {

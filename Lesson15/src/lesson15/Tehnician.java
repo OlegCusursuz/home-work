@@ -43,7 +43,7 @@ public class Tehnician extends Data {
     public void Shou() {
         System.out.println("Tehnician:");
         super.Shou();
-        System.out.println("");
+      
     }
 
 }

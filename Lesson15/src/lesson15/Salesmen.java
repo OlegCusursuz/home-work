@@ -43,7 +43,7 @@ public class Salesmen extends Data {
     public void Shou() {
         System.out.println("Salesmen:");
         super.Shou();
-        System.out.println("");
+        
     }
 
 }
