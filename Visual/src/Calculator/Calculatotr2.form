@@ -22,6 +22,7 @@
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="0" green="0" red="0" type="rgb"/>
     </Property>
+    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
@@ -80,7 +81,7 @@
                           <Component id="btnResult" alignment="1" max="32767" attributes="0"/>
                           <Component id="btnMultiplay" alignment="1" max="32767" attributes="0"/>
                           <Component id="btnMinus" alignment="1" max="32767" attributes="0"/>
-                          <Component id="btnPlus" alignment="1" pref="64" max="32767" attributes="0"/>
+                          <Component id="btnPlus" alignment="1" pref="67" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -153,6 +154,8 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="24" style="1"/>
         </Property>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtResultActionPerformed"/>

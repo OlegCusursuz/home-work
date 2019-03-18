@@ -37,8 +37,11 @@ public class Calculatotr2 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
+        setResizable(false);
 
         txtResult.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        txtResult.setToolTipText("");
+        txtResult.setEnabled(false);
         txtResult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtResultActionPerformed(evt);
@@ -225,7 +228,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
                             .addComponent(btnResult, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnMultiplay, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnMinus, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnPlus, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 64, Short.MAX_VALUE))))
+                            .addComponent(btnPlus, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE))))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -280,124 +283,229 @@ public class Calculatotr2 extends javax.swing.JFrame {
 
     double num, total;
     int calculation;
+    int punct = 0;
+    double sum = 0;
+    boolean result = true;
+    boolean lucr = false;
+
+
+    private void btnShareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShareActionPerformed
+        if (lucr) {
+            if (result) {
+                num = Double.parseDouble(txtResult.getText());
+                calculation = '/';
+                txtResult.setText("");
+                jLabel1.setText(num + "/");
+                punct = 0;
+                result = false;
+            } else {
+                arithmeticOperation();
+                calculation = '/';
+                jLabel1.setText(num + "/");
+                punct = 0;
+            }
+            lucr = false;
+        }
+
+    }//GEN-LAST:event_btnShareActionPerformed
+
+    private void btnCEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCEActionPerformed
+        txtResult.setText("");
+        jLabel1.setText("");
+        punct = 0;
+        total = 0;
+        num = 0;
+
+
+    }//GEN-LAST:event_btnCEActionPerformed
+
+    private void btnModulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModulActionPerformed
+        if (lucr) {
+            if (result) {
+                num = Double.parseDouble(txtResult.getText());
+                calculation = '%';
+                txtResult.setText("");
+                jLabel1.setText(num + "%");
+                punct = 0;
+                result = false;
+            } else {
+                arithmeticOperation();
+                calculation = '%';
+                jLabel1.setText(num + "%");
+                punct = 0;
+            }
+            lucr = false;
+        }
+    }//GEN-LAST:event_btnModulActionPerformed
+
+    private void btnPlusMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusMinusActionPerformed
+        txtResult.setText(Double.parseDouble(txtResult.getText()) * -1 + "");
+    }//GEN-LAST:event_btnPlusMinusActionPerformed
+
+    private void btnMultiplayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplayActionPerformed
+        if (lucr) {
+            if (result) {
+                num = Double.parseDouble(txtResult.getText());
+                calculation = '*';
+                txtResult.setText("");
+                jLabel1.setText(num + "*");
+                punct = 0;
+                result = false;
+            } else {
+                arithmeticOperation();
+                calculation = '*';
+                jLabel1.setText(num + "*");
+                punct = 0;
+            }
+            lucr = false;
+        }
+    }//GEN-LAST:event_btnMultiplayActionPerformed
+
+    private void btnMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusActionPerformed
+        if (lucr) {
+            if (result) {
+                num = Double.parseDouble(txtResult.getText());
+                calculation = '-';
+                txtResult.setText("");
+                jLabel1.setText(num + "-");
+                punct = 0;
+                result = false;
+            } else {
+                arithmeticOperation();
+                calculation = '-';
+                jLabel1.setText(num + "-");
+                punct = 0;
+            }
+            lucr = false;
+        }
+    }//GEN-LAST:event_btnMinusActionPerformed
 
     public void arithmeticOperation() {
+
         switch (calculation) {
-            case 1:
+            case '+':
                 total = num + Double.parseDouble(txtResult.getText());
-                txtResult.setText(total + "");
+                num = total;
+                txtResult.setText("");
+                jLabel1.setText(total + "");
                 break;
-            case 2:
+            case '-':
                 total = num - Double.parseDouble(txtResult.getText());
-                txtResult.setText(total + "");
+                txtResult.setText("");
+                jLabel1.setText(total + "");
+                num = total;
                 break;
-            case 3:
+            case '*':
                 total = num * Double.parseDouble(txtResult.getText());
-                txtResult.setText(total + "");
+                txtResult.setText("");
+                jLabel1.setText(total + "");
+                num = total;
                 break;
-            case 4:
+            case '/':
                 total = num / Double.parseDouble(txtResult.getText());
-                txtResult.setText(total + "");
+                txtResult.setText("");
+                jLabel1.setText(total + "");
+                num = total;
                 break;
-            case 5:
+            case '%':
                 total = num % Double.parseDouble(txtResult.getText());
-                txtResult.setText(total + "");
+                txtResult.setText("");
+                jLabel1.setText(total + "");
+                num = total;
                 break;
 
         }
 
     }
-
-
-    private void btnShareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShareActionPerformed
-        num = Double.parseDouble(txtResult.getText());
-        calculation = 4;
-        txtResult.setText("");
-        jLabel1.setText(num + "/");
-    }//GEN-LAST:event_btnShareActionPerformed
-
-    private void btnCEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCEActionPerformed
-        txtResult.setText("");
-    }//GEN-LAST:event_btnCEActionPerformed
-
-    private void btnModulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModulActionPerformed
-        num = Double.parseDouble(txtResult.getText());
-        calculation = 5;
-        txtResult.setText("");
-        jLabel1.setText(num + "%");
-    }//GEN-LAST:event_btnModulActionPerformed
-
-    private void btnPlusMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusMinusActionPerformed
-       txtResult.setText(Double.parseDouble(txtResult.getText()) * -1 + "");
-    }//GEN-LAST:event_btnPlusMinusActionPerformed
-
-    private void btnMultiplayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplayActionPerformed
-        num = Double.parseDouble(txtResult.getText());
-        calculation = 3;
-        txtResult.setText("");
-        jLabel1.setText(num + "*");
-    }//GEN-LAST:event_btnMultiplayActionPerformed
-
-    private void btnMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusActionPerformed
-        num = Double.parseDouble(txtResult.getText());
-        calculation = 2;
-        txtResult.setText("");
-        jLabel1.setText(num + "-");
-    }//GEN-LAST:event_btnMinusActionPerformed
-
     private void btnPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusActionPerformed
-        num = Double.parseDouble(txtResult.getText());
-        calculation = 1;
-        txtResult.setText("");
-        jLabel1.setText(num + "+");
+        if (lucr) {
+            if (result) {
+                num = Double.parseDouble(txtResult.getText());
+                calculation = '+';
+                txtResult.setText("");
+                jLabel1.setText(num + "+");
+                punct = 0;
+                result = false;
+            } else {
+                arithmeticOperation();
+                calculation = '+';
+                jLabel1.setText(num + "+");
+                punct = 0;
+            }
+            lucr = false;
+        }
     }//GEN-LAST:event_btnPlusActionPerformed
 
     private void btnResultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResultActionPerformed
         arithmeticOperation();
+        txtResult.setText(total + "");
         jLabel1.setText("");
+        punct = 0;
+        result = true;
+        lucr = false;
     }//GEN-LAST:event_btnResultActionPerformed
 
     private void btnPunktActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPunktActionPerformed
-        txtResult.setText(txtResult.getText() + ".");
+        lucr = true;
+        if (punct == 0) {
+            txtResult.setText(txtResult.getText() + ".");
+            punct++;
+        } else {
+            txtResult.setText(txtResult.getText());
+        }
     }//GEN-LAST:event_btnPunktActionPerformed
 
     private void btnZeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnZeroActionPerformed
-        txtResult.setText(txtResult.getText() + "0");
+        lucr = true;
+        if (txtResult.getText().equals("0")) {
+            txtResult.setText(0 + "");
+        } else {
+            txtResult.setText(txtResult.getText() + "0");
+        }
     }//GEN-LAST:event_btnZeroActionPerformed
 
     private void btnUneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUneActionPerformed
         txtResult.setText(txtResult.getText() + "1");
+        lucr = true;
     }//GEN-LAST:event_btnUneActionPerformed
 
     private void btnDouaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDouaActionPerformed
+        lucr = true;
         txtResult.setText(txtResult.getText() + "2");
     }//GEN-LAST:event_btnDouaActionPerformed
 
     private void btnTreiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTreiActionPerformed
+        lucr = true;
         txtResult.setText(txtResult.getText() + "3");
     }//GEN-LAST:event_btnTreiActionPerformed
 
     private void btnPatruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPatruActionPerformed
+        lucr = true;
         txtResult.setText(txtResult.getText() + "4");
     }//GEN-LAST:event_btnPatruActionPerformed
 
     private void btnCinciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCinciActionPerformed
+        lucr = true;
         txtResult.setText(txtResult.getText() + "5");
     }//GEN-LAST:event_btnCinciActionPerformed
 
     private void btnShaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShaseActionPerformed
+        lucr = true;
         txtResult.setText(txtResult.getText() + "6");
     }//GEN-LAST:event_btnShaseActionPerformed
 
     private void btnShapteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShapteActionPerformed
+        lucr = true;
         txtResult.setText(txtResult.getText() + "7");
     }//GEN-LAST:event_btnShapteActionPerformed
 
     private void btnOptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOptActionPerformed
+        lucr = true;
         txtResult.setText(txtResult.getText() + "8");
     }//GEN-LAST:event_btnOptActionPerformed
 
     private void btnNouaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNouaActionPerformed
+        lucr = true;
         txtResult.setText(txtResult.getText() + "9");
     }//GEN-LAST:event_btnNouaActionPerformed
 
