@@ -28,7 +28,7 @@ public class Input {
         
         while(intChar != -1){
             System.out.println((char) intChar);
-            intChar = inStream.
+            intChar = inStream
         }
     }
 }
