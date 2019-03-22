@@ -89,9 +89,9 @@
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
             <StringItem index="0" value="Programmer"/>
-            <StringItem index="1" value="AcounMann"/>
+            <StringItem index="1" value="Accountant"/>
             <StringItem index="2" value="HR Manager"/>
-            <StringItem index="3" value="Cleanar"/>
+            <StringItem index="3" value="Cleaner"/>
           </StringArray>
         </Property>
       </Properties>
@@ -119,7 +119,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Password"/>
+        <Property name="text" type="java.lang.String" value="Name"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">

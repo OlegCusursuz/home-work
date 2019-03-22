@@ -40,7 +40,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
         setBackground(new java.awt.Color(0, 0, 0));
         setResizable(false);
 
-        txtResult.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        txtResult.setFont(new java.awt.Font("DialogInput", 1, 36)); // NOI18N
         txtResult.setToolTipText("");
         txtResult.setEnabled(false);
         txtResult.addActionListener(new java.awt.event.ActionListener() {
@@ -49,6 +49,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
             }
         });
 
+        btnShapte.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
         btnShapte.setText("7");
         btnShapte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,6 +57,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
             }
         });
 
+        btnCE.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
         btnCE.setText("CE");
         btnCE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,6 +65,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
             }
         });
 
+        btnOpt.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
         btnOpt.setText("8");
         btnOpt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,6 +73,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
             }
         });
 
+        btnModul.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
         btnModul.setText("%");
         btnModul.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,6 +81,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
             }
         });
 
+        btnNoua.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
         btnNoua.setText("9");
         btnNoua.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,6 +89,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
             }
         });
 
+        btnMultiplay.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
         btnMultiplay.setText("*");
         btnMultiplay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,6 +97,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
             }
         });
 
+        btnShare.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
         btnShare.setText("/");
         btnShare.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,6 +105,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
             }
         });
 
+        btnCinci.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
         btnCinci.setText("5");
         btnCinci.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,6 +113,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
             }
         });
 
+        btnZero.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
         btnZero.setText("0");
         btnZero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,6 +121,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
             }
         });
 
+        btnDoua.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
         btnDoua.setText("2");
         btnDoua.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,6 +129,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
             }
         });
 
+        btnUne.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
         btnUne.setText("1");
         btnUne.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,6 +137,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
             }
         });
 
+        btnPlusMinus.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
         btnPlusMinus.setText("+/-");
         btnPlusMinus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,6 +145,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
             }
         });
 
+        btnPatru.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
         btnPatru.setText("4");
         btnPatru.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,6 +153,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
             }
         });
 
+        btnTrei.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
         btnTrei.setText("3");
         btnTrei.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,6 +161,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
             }
         });
 
+        btnPunkt.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
         btnPunkt.setText(".");
         btnPunkt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,6 +169,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
             }
         });
 
+        btnShase.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
         btnShase.setText("6");
         btnShase.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -161,6 +177,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
             }
         });
 
+        btnMinus.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
         btnMinus.setText("-");
         btnMinus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,6 +185,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
             }
         });
 
+        btnPlus.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
         btnPlus.setText("+");
         btnPlus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -175,6 +193,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
             }
         });
 
+        btnResult.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
         btnResult.setText("=");
         btnResult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,10 +201,11 @@ public class Calculatotr2 extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("DialogInput", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
 
-        jDelete.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jDelete.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
         jDelete.setText("←");
         jDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -205,17 +225,9 @@ public class Calculatotr2 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtResult, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
@@ -232,29 +244,36 @@ public class Calculatotr2 extends javax.swing.JFrame {
                                     .addComponent(btnDoua, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
                             .addComponent(btnZero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnNoua, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnTrei, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnPunkt, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                            .addComponent(btnShase, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
-                            .addComponent(btnPlusMinus, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(btnNoua, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnTrei, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnPunkt, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                .addComponent(btnShase, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE))
+                            .addComponent(btnPlusMinus))
                         .addGap(20, 20, 20)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnShare, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnResult, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnMultiplay, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnMinus, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnPlus, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE))))
+                            .addComponent(btnPlus, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(txtResult, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtResult, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtResult)
+                    .addComponent(jDelete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnCE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -276,7 +295,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
                     .addComponent(btnPatru, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnCinci, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnShase, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnDoua, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -285,10 +304,9 @@ public class Calculatotr2 extends javax.swing.JFrame {
                     .addComponent(btnPlus, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnPunkt, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnResult, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(btnZero, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnResult, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnZero, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPunkt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(20, 20, 20))
         );
 
@@ -304,7 +322,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
 
 
     private void btnShareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShareActionPerformed
-        if (lucr) {
+         if (txtResult.getText().length() > 0) {
             if (result) {
                 num = Double.parseDouble(txtResult.getText());
                 calculation = '/';
@@ -329,12 +347,13 @@ public class Calculatotr2 extends javax.swing.JFrame {
         result = true;
         calculation = '0';
         total = 0.0;
+        punct = 0;
 
 
     }//GEN-LAST:event_btnCEActionPerformed
 
     private void btnModulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModulActionPerformed
-        if (lucr) {
+         if (txtResult.getText().length() > 0) {
             if (result) {
                 num = Double.parseDouble(txtResult.getText());
                 calculation = '%';
@@ -359,7 +378,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPlusMinusActionPerformed
 
     private void btnMultiplayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplayActionPerformed
-        if (lucr) {
+        if (txtResult.getText().length() > 0) {
             if (result) {
                 num = Double.parseDouble(txtResult.getText());
                 calculation = '*';
@@ -378,7 +397,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMultiplayActionPerformed
 
     private void btnMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusActionPerformed
-        if (lucr) {
+         if (txtResult.getText().length() > 0) {
             if (result) {
                 num = Double.parseDouble(txtResult.getText());
                 calculation = '-';
@@ -434,7 +453,7 @@ public class Calculatotr2 extends javax.swing.JFrame {
 
     }
     private void btnPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusActionPerformed
-        if (lucr) {
+        if (txtResult.getText().length() > 0) {
             if (result) {
                 num = Double.parseDouble(txtResult.getText());
                 calculation = '+';

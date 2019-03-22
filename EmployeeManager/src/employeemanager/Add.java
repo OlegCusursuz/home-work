@@ -5,6 +5,7 @@
  */
 package employeemanager;
 
+import EmployeeService.EmployeeService;
 import newpackage.Employee;
 import newpackage.Position;
 
@@ -47,7 +48,7 @@ public class Add extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Programmer", "AcounMann", "HR Manager", "Cleanar" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Programmer", "Accountant", "HR Manager", "Cleaner" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -68,7 +69,7 @@ public class Add extends javax.swing.JFrame {
 
         jLabel1.setText("Username");
 
-        jLabel2.setText("Password");
+        jLabel2.setText("Name");
 
         jLabel3.setText("jLabel3");
 
@@ -119,10 +120,12 @@ public class Add extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       Employee emp = new Employee(jUsername.getText(), jPassword.getText());
-           String profession = jComboBox1.getSelectedItem().toString();
-           emp.setPosition(Position.getByPositionName(profession));
-           Main.emloyeeData.add(emp);
+        Employee emp = new Employee(jUsername.getText(), jPassword.getText());
+        String profession = jComboBox1.getSelectedItem().toString();
+        emp.setPosition(Position.getByPositionName(profession));
+        //Main.employee.add(emp);
+        EmployeeService.getEmployeeList().add(emp);
+        Main.addEmployee(emp);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed

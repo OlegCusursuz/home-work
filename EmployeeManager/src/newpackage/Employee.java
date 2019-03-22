@@ -9,6 +9,7 @@ package newpackage;
 public class Employee {
 
     private Integer id;
+    private Integer birthDay;
     private String name;
     private String surname;
     protected Position position;
@@ -20,6 +21,10 @@ public class Employee {
 
     public Employee() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public long getBirthDay(){
+        return birthDay;
     }
 
     public String getName() {
@@ -36,6 +41,10 @@ public class Employee {
 
     public long getId() {
         return id;
+    }
+
+    public void setBirthDay(Integer birthDay){
+        this.birthDay = birthDay; 
     }
 
     public void setId(Integer id) {

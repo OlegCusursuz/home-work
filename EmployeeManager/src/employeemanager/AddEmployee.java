@@ -6,8 +6,6 @@
 package employeemanager;
 
 
-import newpackage.AddEmployeeOutput;
-
 
 /**
  *
@@ -103,8 +101,8 @@ public class AddEmployee extends javax.swing.JFrame {
         Login loginWindow = new Login();
         this.usernameString = jUsername.getText();
         this.passwordString = jPassword.getText();
-        loginWindow.userName(this.usernameString);
-        loginWindow.password(this.passwordString);
+        loginWindow.setUsername(this.usernameString);
+        loginWindow.setPassword(this.passwordString);
         loginWindow.setVisible(true);
         setVisible(false);
     }//GEN-LAST:event_jAddActionPerformed

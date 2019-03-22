@@ -123,11 +123,19 @@ public class Login extends javax.swing.JFrame {
     private String userNameString ;
     private String passwordString ;
     
-    void userName(String userNameString){
+    public String setUsernameString(){
+        return userNameString;
+    }
+    
+    public String setPasswordString(){
+        return passwordString;
+    }
+    
+    public void setUsername(String userNameString){
         this.userNameString = userNameString;
     }
     
-    void password(String passwordString){
+    public void setPassword(String passwordString){
         this.passwordString = passwordString;
     }
     

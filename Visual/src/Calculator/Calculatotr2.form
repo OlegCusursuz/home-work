@@ -44,19 +44,9 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="39" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-          </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="txtResult" min="-2" pref="257" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jDelete" min="-2" pref="60" max="-2" attributes="0"/>
-                  </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" attributes="0">
@@ -77,12 +67,14 @@
                           <Component id="btnZero" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="btnNoua" max="32767" attributes="0"/>
-                          <Component id="btnTrei" max="32767" attributes="0"/>
-                          <Component id="btnPunkt" alignment="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="btnShase" alignment="1" pref="68" max="32767" attributes="0"/>
-                          <Component id="btnPlusMinus" alignment="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="btnNoua" max="32767" attributes="0"/>
+                              <Component id="btnTrei" max="32767" attributes="0"/>
+                              <Component id="btnPunkt" alignment="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="btnShase" alignment="1" pref="68" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="btnPlusMinus" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -90,7 +82,15 @@
                           <Component id="btnResult" alignment="1" max="32767" attributes="0"/>
                           <Component id="btnMultiplay" alignment="1" max="32767" attributes="0"/>
                           <Component id="btnMinus" alignment="1" max="32767" attributes="0"/>
-                          <Component id="btnPlus" alignment="1" pref="67" max="32767" attributes="0"/>
+                          <Component id="btnPlus" alignment="1" pref="63" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="txtResult" min="-2" pref="257" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel1" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
+                          <Component id="jDelete" min="-2" pref="60" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -101,11 +101,11 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jLabel1" min="-2" pref="16" max="-2" attributes="0"/>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtResult" alignment="3" min="-2" pref="84" max="-2" attributes="0"/>
-                  <Component id="jDelete" alignment="3" min="-2" pref="59" max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" pref="22" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="txtResult" max="32767" attributes="0"/>
+                  <Component id="jDelete" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -133,7 +133,7 @@
                   <Component id="btnCinci" alignment="1" max="32767" attributes="0"/>
                   <Component id="btnShase" alignment="1" pref="52" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" alignment="1" groupAlignment="3" attributes="0">
                       <Component id="btnDoua" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
@@ -144,11 +144,9 @@
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnPunkt" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
-                      <Component id="btnResult" alignment="3" min="-2" pref="58" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="btnResult" min="-2" pref="58" max="-2" attributes="0"/>
                   <Component id="btnZero" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
+                  <Component id="btnPunkt" alignment="1" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
           </Group>
@@ -159,7 +157,7 @@
     <Component class="javax.swing.JTextField" name="txtResult">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Dialog" size="24" style="1"/>
+          <Font name="DialogInput" size="36" style="1"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="enabled" type="boolean" value="false"/>
@@ -170,6 +168,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnShapte">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="DialogInput" size="24" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="7"/>
       </Properties>
       <Events>
@@ -178,6 +179,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnCE">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="DialogInput" size="24" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="CE"/>
       </Properties>
       <Events>
@@ -186,6 +190,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnOpt">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="DialogInput" size="24" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="8"/>
       </Properties>
       <Events>
@@ -194,6 +201,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnModul">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="DialogInput" size="24" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="%"/>
       </Properties>
       <Events>
@@ -202,6 +212,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnNoua">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="DialogInput" size="24" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="9"/>
       </Properties>
       <Events>
@@ -210,6 +223,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnMultiplay">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="DialogInput" size="24" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="*"/>
       </Properties>
       <Events>
@@ -218,6 +234,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnShare">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="DialogInput" size="24" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="/"/>
       </Properties>
       <Events>
@@ -226,6 +245,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnCinci">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="DialogInput" size="24" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="5"/>
       </Properties>
       <Events>
@@ -234,6 +256,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnZero">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="DialogInput" size="24" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="0"/>
       </Properties>
       <Events>
@@ -242,6 +267,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnDoua">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="DialogInput" size="24" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="2"/>
       </Properties>
       <Events>
@@ -250,6 +278,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnUne">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="DialogInput" size="24" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="1"/>
       </Properties>
       <Events>
@@ -258,6 +289,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnPlusMinus">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="DialogInput" size="24" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="+/-"/>
       </Properties>
       <Events>
@@ -266,6 +300,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnPatru">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="DialogInput" size="24" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="4"/>
       </Properties>
       <Events>
@@ -274,6 +311,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnTrei">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="DialogInput" size="24" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="3"/>
       </Properties>
       <Events>
@@ -282,6 +322,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnPunkt">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="DialogInput" size="24" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="."/>
       </Properties>
       <Events>
@@ -290,6 +333,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnShase">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="DialogInput" size="24" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="6"/>
       </Properties>
       <Events>
@@ -298,6 +344,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnMinus">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="DialogInput" size="24" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="-"/>
       </Properties>
       <Events>
@@ -306,6 +355,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnPlus">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="DialogInput" size="24" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="+"/>
       </Properties>
       <Events>
@@ -314,6 +366,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnResult">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="DialogInput" size="24" style="1"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="="/>
       </Properties>
       <Events>
@@ -322,6 +377,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="DialogInput" size="14" style="1"/>
+        </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="ff" type="rgb"/>
         </Property>
@@ -331,7 +389,7 @@
     <Component class="javax.swing.JButton" name="jDelete">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Dialog" size="24" style="1"/>
+          <Font name="DialogInput" size="24" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="&#x2190;"/>
       </Properties>

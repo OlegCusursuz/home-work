@@ -12,7 +12,7 @@ package newpackage;
 public enum Position {
     Programmer("Programmer"),
     Accountant("Accountant"),
-    HRManager("HRManager"),
+    HRManager("HR Manager"),
     Cleaner("Cleaner");
     
     private String naem;
