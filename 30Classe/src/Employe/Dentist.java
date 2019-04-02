@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package animals;
+package Employe;
 
 /**
  *
  * @author kusur
  */
-public class Mole {
+public class Dentist {
     
 }

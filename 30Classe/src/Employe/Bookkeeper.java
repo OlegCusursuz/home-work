@@ -3,12 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package person;
+package Employe;
 
 /**
  *
  * @author kusur
  */
 public class Bookkeeper {
+    String tool;
+    String name;
+    int salary;
+
+    public Bookkeeper(String tool, String name, int salary) {
+        this.tool = tool;
+        this.name = name;
+        this.salary = salary;
+    }
+    
+    
+    
     
 }

@@ -15,15 +15,15 @@ public enum Position {
     HRManager("HR Manager"),
     Cleaner("Cleaner");
     
-    private String naem;
+    private String name;
     
     private Position(String name){
-        this.naem = name;
+        this.name = name;
     }
     
     public static Position getByPositionName(String positionName){
         for (Position pos : Position.values()){
-            if (pos.naem.equals(positionName)){
+            if (pos.name.equals(positionName)){
                 return pos;
             }
         }

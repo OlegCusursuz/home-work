@@ -10,5 +10,26 @@ package notebook;
  * @author kusur
  */
 public class Asus {
+    boolean touchDisplay;
+    int diagonal;
+    String cpu;
+    boolean game;
+
+    public Asus( int diagonal, String cpu) {
+        this.diagonal = diagonal;
+        this.cpu = cpu;
+    }
+    
+    public void diagonal() {
+        touchDisplay = diagonal > 13;
+    }
+    
+    public void cpu(){
+        game = "Intel CORE i9".equals(cpu);
+    }
+
+    public Asus() {
+        System.out.println("game = "+game);
+    }
     
 }

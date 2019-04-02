@@ -10,5 +10,28 @@ package car;
  * @author kusur
  */
 public class Mercedes {
+    int motor;
+    String color;
+    boolean automaticTransmission;
+    boolean taxi;
+
+    public Mercedes(int motor, String color, boolean transmission, boolean taxi) {
+        this.motor = motor;
+        this.color = color;
+        this.automaticTransmission = transmission;
+        this.taxi = taxi;
+    }
+
+    public void fuel() {
+        if (motor == 2.0) {
+            automaticTransmission = true;
+        } else if (motor == 1.8) {
+            automaticTransmission = false;
+        }
+    }
+
+    public void taxi() {
+        taxi = "yellow".equals(color);
+    }
     
 }
