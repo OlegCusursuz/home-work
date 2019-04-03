@@ -9,13 +9,13 @@ package Employe;
  *
  * @author kusur
  */
-public class Bookkeeper {
+public class Programmer {
     String[] Employee = new String[]{"bookkeeper", "builder", "chauffeur", "dentist", "meneger", "programmer"};
     private String tool;
     private String name;
     int salary;
 
-    public Bookkeeper(String tool, String name) {
+    public Programmer(String tool, String name) {
         this.tool = tool;
         this.name = name;
     }
@@ -54,10 +54,11 @@ public class Bookkeeper {
         }
     }
 
-    public Bookkeeper() {
+    public Programmer() {
         getName();
         getTool();
         salary();
     }
 
+    
 }

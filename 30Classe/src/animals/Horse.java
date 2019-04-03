@@ -15,7 +15,7 @@ public class Horse {
     private boolean job;
     boolean owner;
     
-    public void setName(){
+    private void getName(){
         System.out.println(name);
     }
 
@@ -23,7 +23,7 @@ public class Horse {
         this.owner = owner;
     }
     
-    public void job(){
+    private void job(){
         if(age<10){
             job = true;
             System.out.println(job);
@@ -39,7 +39,7 @@ public class Horse {
 
     public Horse() {
     job();
-    setName();
+    getName();
     }
     
     
