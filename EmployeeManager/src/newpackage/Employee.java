@@ -1,47 +1,37 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package newpackage;
 
+import java.time.LocalDate;
 
 public class Employee {
 
     private Integer id;
-    private String day;
-    private String month;
-    private String year;
     private String adres;
     private String name;
     private String surname;
     protected Position position;
-    
+    private LocalDate ldBirthday;
 
-    public Employee(String name, String surname, String day, String month,String year, String adres) {
+    public Employee(String name, String surname, LocalDate ldBirthday, String adres) {
         this.name = name;
         this.surname = surname;
-        this.day = day;
-        this.month = month;
-        this.year = year;
         this.adres = adres;
+        this.ldBirthday = ldBirthday;
     }
 
     public Employee() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public String getDay(){
-        return day;
+    public Employee(int aInt, String string, String string0, Position byPositionName,String ldBirthday,String adres) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    public String getMonth(){
-        return month;
+
+    public LocalDate getLDBirthDay() {
+        return ldBirthday;
     }
-    public String getYear(){
-        return year;
-    }
-    
-    public String getAdres(){
+
+    public String getAdres() {
         return adres;
     }
 
@@ -61,21 +51,11 @@ public class Employee {
         return id;
     }
 
-    public void setDay(String Day){
-        this.day = Day; 
-    }
-    public void setMonth(String month){
-        this.month = month;
-    }
-    public void setYear(String year){
-        this.year = year;
-    }
-
     public void setId(Integer id) {
         this.id = id;
     }
-    
-    public void setAdres(String adres){
+
+    public void setAdres(String adres) {
         this.adres = adres;
     }
 
@@ -94,12 +74,14 @@ public class Employee {
     public void setPosition(Position position) {
         this.position = position;
     }
+    
+    public void setLDBirthDay(LocalDate birthday){
+        this.ldBirthday =  birthday;
+    }
 
     @Override
     public String toString() {
-        return "\n"+"Employee{" + "id=" + id + ", name=" + name + ", surname=" + surname + ", Birth day :"+day+month+year+", position=" + position + '}';
+        return id + "," + name + "," + surname + "," + position + "," + ldBirthday+","+adres;
     }
-    
-    
 
 }

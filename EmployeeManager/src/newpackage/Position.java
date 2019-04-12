@@ -15,7 +15,7 @@ public enum Position {
     HRManager("HR Manager"),
     Cleaner("Cleaner");
     
-    private String name;
+    private final String name;
     
     private Position(String name){
         this.name = name;
