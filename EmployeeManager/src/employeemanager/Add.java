@@ -195,15 +195,14 @@ public class Add extends javax.swing.JFrame {
 
         Employee emp = new Employee(jName.getText(),
                 jUsername.getText(),
+                Position.getByPositionName(profession),
                 LocalDate.parse(ldBirthday),
                 jAdres.getText());
-
         try {
             Main.addEmployee(emp);
         } catch (SQLException ex) {
             Logger.getLogger(Add.class.getName()).log(Level.SEVERE, null, ex);
         }
-
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed

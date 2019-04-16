@@ -1,6 +1,6 @@
-
 package employeemanager;
 
+import EmployeeService.EmployeeDao;
 import EmployeeService.EmployeeService;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ import newpackage.Employee;
  * @author kusur
  */
 public class Main extends javax.swing.JFrame {
-    
+
     private final int ID = 0;
 
     public static void addEmployee(Employee emp) throws SQLException {
@@ -24,37 +24,40 @@ public class Main extends javax.swing.JFrame {
             // display the error
         }
     }
+    public static EmployeeDao employeeDao = new EmployeeDao();
 
-    public static void editEmployee(int idEmployee, String newName, String newSurname, String newPosition, String newldBirthday, String newAdres) {
+    public static void editEmployee(int idEmployee, String newName, String newSurname, String newPosition, String newldBirthday, String newAdres) throws SQLException {
         DefaultTableModel employeeListModel = (DefaultTableModel) Main.employeeListTeble.getModel();
-        employeeListModel.setValueAt(newName, idEmployee - 1, 1);
+        employeeListModel.setValueAt(newName, selectedRowEdit, 1);
+        employeeListModel.setValueAt(newSurname, selectedRowEdit, 2);
+        employeeListModel.setValueAt(newPosition, selectedRowEdit, 3);
+        employeeListModel.setValueAt(newldBirthday, selectedRowEdit, 4);
+        employeeListModel.setValueAt(newAdres, selectedRowEdit, 5);
         EmployeeService.edit(idEmployee, newName, newSurname, newPosition, newldBirthday, newAdres);
     }
-    
+
     public Main() throws SQLException {
         initComponents();
         this.loadEmployees();
     }
-    
+
     private void loadEmployees() throws SQLException {
         ArrayList<Employee> all = EmployeeService.getAll();
         DefaultTableModel employeeListModel = (DefaultTableModel) Main.employeeListTeble.getModel();
         for (Employee emp : all) {
             int employeeId = employeeListModel.getRowCount() + 1;
-            employeeListModel.addRow(new Object[]{employeeId, emp.getName(), emp.getSurname(), emp.getPosition().toString()});
+            employeeListModel.addRow(new Object[]{employeeId, emp.getName(), emp.getSurname(), emp.getPosition().toString(), emp.getLDBirthDay(), emp.getAdres()});
         }
     }
 
     private static void addEmployeeToList(Employee emp) throws SQLException {
         DefaultTableModel employeeListModel = (DefaultTableModel) Main.employeeListTeble.getModel();
         int employeeId = employeeListModel.getRowCount() + 1;
-        employeeListModel.addRow(new Object[]{employeeId, emp.getName(), emp.getSurname(), emp.getPosition().toString(),emp.getLDBirthDay(),emp.getAdres()});
+        employeeListModel.addRow(new Object[]{employeeId, emp.getName(), emp.getSurname(), emp.getPosition().toString(), emp.getLDBirthDay(), emp.getAdres()});
         emp.setId(employeeId);
         EmployeeService.add(emp);
     }
-    
 
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -318,13 +321,12 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnImportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImportActionPerformed
-       Import importWindow = new Import();
-       importWindow.setVisible(true);
+        Import importWindow = new Import();
+        importWindow.setVisible(true);
     }//GEN-LAST:event_btnImportActionPerformed
 
     private void btnPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrintActionPerformed
-        
-        
+
     }//GEN-LAST:event_btnPrintActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -332,11 +334,46 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
-        
-    }//GEN-LAST:event_btnDeleteActionPerformed
+        DefaultTableModel employeeListModel = (DefaultTableModel) Main.employeeListTeble.getModel();
+        int selectedRow = Main.employeeListTeble.getSelectedRow();
+        if (selectedRow != -1) {
+            Object value = employeeListModel.getValueAt(selectedRow, ID);
+            int employeeId = Integer.parseInt(value.toString());
+            String name = employeeListModel.getValueAt(selectedRow, 1).toString();
+            String surname =  employeeListModel.getValueAt(selectedRow, 2).toString();
+            String position = employeeListModel.getValueAt(selectedRow, 3).toString();
+            String birthday = employeeListModel.getValueAt(selectedRow, 4).toString();
+            String adres = employeeListModel.getValueAt(selectedRow, 5).toString();
+            try {
+                int idEmp = employeeDao.getID(name, surname, position, birthday, adres);
+                employeeDao.remove(idEmp);
+            } catch (SQLException ex) {
+                Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            employeeListModel.removeRow(selectedRow);
+            
+            for (; selectedRow < employeeListModel.getRowCount(); selectedRow++) {
+                employeeListModel.setValueAt(employeeId++, selectedRow, ID);
+            }
 
+        }
+
+    }//GEN-LAST:event_btnDeleteActionPerformed
+    public static int selectedRowEdit;
     private void btnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditActionPerformed
-        
+        selectedRowEdit = Main.employeeListTeble.getSelectedRow();
+        if (selectedRowEdit != -1) {
+            DefaultTableModel employeeListModel = (DefaultTableModel) Main.employeeListTeble.getModel();
+            Employee emp = employeeDao.getEmployee(
+                    employeeListModel.getValueAt(selectedRowEdit, 1).toString(),
+                    employeeListModel.getValueAt(selectedRowEdit, 2).toString(),
+                    employeeListModel.getValueAt(selectedRowEdit, 3).toString(),
+                    employeeListModel.getValueAt(selectedRowEdit, 4).toString(),
+                    employeeListModel.getValueAt(selectedRowEdit, 5).toString());
+            Edit editWindow = new Edit(emp);
+            editWindow.setVisible(true);
+        }
     }//GEN-LAST:event_btnEditActionPerformed
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
@@ -356,7 +393,6 @@ public class Main extends javax.swing.JFrame {
         Output output = new Output();
         output.setVisible(true);
     }//GEN-LAST:event_btnOutputActionPerformed
-
 
     /**
      * @param args the command line arguments

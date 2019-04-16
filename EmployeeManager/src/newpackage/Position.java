@@ -30,6 +30,11 @@ public enum Position {
         throw new IllegalArgumentException("position does exist in the enum");
     }
     
+    @Override
+    public String toString(){
+      return name;  
+    }
+    
     
     
     

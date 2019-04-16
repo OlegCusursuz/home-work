@@ -1,4 +1,3 @@
-
 package newpackage;
 
 import java.time.LocalDate;
@@ -12,19 +11,25 @@ public class Employee {
     protected Position position;
     private LocalDate ldBirthday;
 
-    public Employee(String name, String surname, LocalDate ldBirthday, String adres) {
+    public Employee(String name, String surname, Position position, LocalDate ldBirthday, String adres) {
         this.name = name;
         this.surname = surname;
         this.adres = adres;
         this.ldBirthday = ldBirthday;
+        this.position = position;
     }
 
     public Employee() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public Employee(int aInt, String string, String string0, Position byPositionName,String ldBirthday,String adres) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Employee(int Id, String name, String surname, Position byPositionName, String ldBirthday, String adres) {
+        this.id = Id;
+        this.name = name;
+        this.surname = surname;
+        this.position = byPositionName;
+        this.ldBirthday = LocalDate.parse(ldBirthday);
+        this.adres = adres;
     }
 
     public LocalDate getLDBirthDay() {
@@ -74,14 +79,14 @@ public class Employee {
     public void setPosition(Position position) {
         this.position = position;
     }
-    
-    public void setLDBirthDay(LocalDate birthday){
-        this.ldBirthday =  birthday;
+
+    public void setLDBirthDay(LocalDate birthday) {
+        this.ldBirthday = birthday;
     }
 
     @Override
     public String toString() {
-        return id + "," + name + "," + surname + "," + position + "," + ldBirthday+","+adres;
+        return id + "," + name + "," + surname + "," + position + "," + ldBirthday + "," + adres;
     }
 
 }

@@ -1,7 +1,10 @@
 package employeemanager;
 
 import EmployeeService.EmployeeService;
+import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import newpackage.Employee;
 
 /**
@@ -16,11 +19,11 @@ public class Edit extends javax.swing.JFrame {
         initComponents();
         jName.setText(emp.getName());
         jUsername.setText(emp.getSurname());
+        jPosition.setSelectedItem(emp.getPosition().toString());
         cbYear.setSelectedItem(emp.getLDBirthDay().getYear());
-        cbMonth.setSelectedItem(emp.getLDBirthDay().getMonth());
+        cbMonth.setSelectedItem(emp.getLDBirthDay().getMonthValue());
         cbDay.setSelectedItem(emp.getLDBirthDay().getDayOfMonth());
         jAdres.setText(emp.getAdres());
-        jPosition.setSelectedItem(emp.getPosition().toString());
         this.emp = emp;
 
     }
@@ -176,8 +179,11 @@ public class Edit extends javax.swing.JFrame {
         LocalDate ldBirthday = LocalDate.of(Integer.parseInt(cbYear.getSelectedItem().toString()),Integer.parseInt( cbMonth.getSelectedItem().toString()),
                 Integer.parseInt( cbDay.getSelectedItem().toString()));
         String newAdres = jAdres.getText();
-        Main.editEmployee(this.emp.getId(), newName, newUsername, newPosition, ldBirthday, newAdres);
-        EmployeeService.edit(this.emp.getId(), newName, newUsername, newPosition, ldBirthday, newAdres);
+        try {
+            Main.editEmployee(this.emp.getId(), newName, newUsername, newPosition, ldBirthday.toString(), newAdres);
+        } catch (SQLException ex) {
+            Logger.getLogger(Edit.class.getName()).log(Level.SEVERE, null, ex);
+        }
         setVisible(false);
     }//GEN-LAST:event_btnSaveActionPerformed
 

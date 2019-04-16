@@ -15,6 +15,7 @@ import java.util.logging.Logger;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import newpackage.Employee;
+import newpackage.Position;
 
 public class EmployeeService {
     private static EmployeeDao empDao = new EmployeeDao();
@@ -25,7 +26,10 @@ public class EmployeeService {
         return null;
     }
 
-    public static void edit(Integer employeeId, String newName, String newSurname, String newPosition, String birthday, String adres) {
+    public static void edit(Integer employeeId, String newName, String newSurname, String newPosition, String birthday, String adres) throws SQLException {
+        Employee emp = new Employee(employeeId, newName, newSurname, Position.Programmer, birthday, adres);
+        EmployeeDao employeeDao = new EmployeeDao();
+        employeeDao.edit(emp);
     }
     
 
