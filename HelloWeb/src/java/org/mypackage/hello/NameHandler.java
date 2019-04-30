@@ -16,7 +16,6 @@ public class NameHandler {
     public NameHandler() {
         name = null;
     }
-
     /**
      * @return the name
      */

@@ -16,7 +16,10 @@
         <form name="Name Input Form" action="response.jsp">
             Enter your name:
             <input type="text" name="name" />
+            <br>
+            surname:
             <input type="text" name="surname" />
+            <br>
             <input type="submit" value="OK" />
             
         </form>
