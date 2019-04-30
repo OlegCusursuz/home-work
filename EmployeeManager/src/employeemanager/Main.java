@@ -345,8 +345,8 @@ public class Main extends javax.swing.JFrame {
             String birthday = employeeListModel.getValueAt(selectedRow, 4).toString();
             String adres = employeeListModel.getValueAt(selectedRow, 5).toString();
             try {
-                int idEmp = employeeDao.getID(name, surname, position, birthday, adres);
-                employeeDao.remove(idEmp);
+                Employee emp = employeeDao.getEmployee(name, surname, position, birthday, adres);
+                employeeDao.remove(emp.getId());
             } catch (SQLException ex) {
                 Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
             }

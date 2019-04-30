@@ -27,7 +27,7 @@ public class EmployeeService {
     }
 
     public static void edit(Integer employeeId, String newName, String newSurname, String newPosition, String birthday, String adres) throws SQLException {
-        Employee emp = new Employee(employeeId, newName, newSurname, Position.Programmer, birthday, adres);
+        Employee emp = new Employee(employeeId, newName, newSurname, Position.getByPositionName(newPosition), birthday, adres);
         EmployeeDao employeeDao = new EmployeeDao();
         employeeDao.edit(emp);
     }

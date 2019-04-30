@@ -1,6 +1,5 @@
 package employeemanager;
 
-import EmployeeService.EmployeeService;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.logging.Level;

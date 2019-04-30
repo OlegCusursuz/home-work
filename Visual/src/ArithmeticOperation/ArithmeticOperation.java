@@ -11,7 +11,7 @@ package ArithmeticOperation;
  */
 public class ArithmeticOperation {
     double num, total;
-    int calculation;
+    char calculation;
     int punct = 0;
     double sum = 0;
 

@@ -106,7 +106,7 @@ public class EmployeeDao {
 
             dbStatement.setString(1, emp.getName());
             dbStatement.setString(2, emp.getSurname());
-            dbStatement.setString(3, emp.getPosition().name());
+            dbStatement.setString(3, emp.getPosition().toString());
             dbStatement.setString(4, emp.getLDBirthDay().toString());
             dbStatement.setString(5, emp.getAdres());
             dbStatement.setInt(6, emp.getId());
@@ -138,13 +138,12 @@ public class EmployeeDao {
     public Employee getEmployee(String name, String surname, String position, String birthday, String adres) {
         String sql = "SELECT id, name, surname, position, birthday, adres FROM app.employee "
                 + "WHERE name=? AND surname=? AND position=? AND birthday=? AND adres=?";
-        try (Connection conn = connect(); PreparedStatement prepStmt = conn.prepareStatement(sql)) {
+        try (Connection conn = connect(); PreparedStatement prepStmt = conn.prepareStatement(sql);ResultSet rs = prepStmt.executeQuery()) {
             prepStmt.setString(1, name);
             prepStmt.setString(2, surname);
             prepStmt.setString(3, position);
             prepStmt.setString(4, birthday);
             prepStmt.setString(5, adres);
-            ResultSet rs = prepStmt.executeQuery();
             Employee emp = null;
             while (rs.next()) {
                 emp = new Employee(rs.getInt("id"),
@@ -160,25 +159,4 @@ public class EmployeeDao {
         }
         return null;
     }
-    
-     public int getID(String name, String surname, String position, String birthday, String adres) throws SQLException {
-        String sql = "SELECT id FROM app.employee WHERE name=? AND surname=? AND position=? AND birthday=? AND adres=?";
-        try (Connection conn = connect();
-                PreparedStatement dbStatement = conn.prepareStatement(sql)) {
-            dbStatement.setString(1, name);
-            dbStatement.setString(2, surname);
-            dbStatement.setString(3, position);
-            dbStatement.setString(4, birthday);
-            dbStatement.setString(5, adres);
-            
-            ResultSet rs = dbStatement.executeQuery();
-            int idEmp = rs.getInt("id");
-            return idEmp;
-            
-        } catch (SQLException ex) {
-            System.err.println("Caught an error trying to getID the employees");
-            throw ex;
-        }
-    }
-
 }
