@@ -14,14 +14,16 @@
     <body>
         <h1>Entry Form</h1>
         <form name="Name Input Form" action="response.jsp">
-            Enter your name:
-            <input type="text" name="name" />
+            num1
+            <input type="text" name="num1" />
             <br>
-            surname:
-            <input type="text" name="surname" />
+            +
             <br>
-            <input type="submit" value="OK" />
-            
+            num2
+            <input type="text" name="num2" />
+            <br>
+            <input type="submit" value="Summa" />
+
         </form>
     </body>
 </html>

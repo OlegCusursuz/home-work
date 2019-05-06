@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="emplpoyeeShow.jsp" method="POST">
+            Name: <input type="text" name="name" /><br>
+            Surname: <input type="text" name="surname"/><br>
+            Position: <select name="position">
+                <option>Programmer</option>
+                <option>Accountant</option>
+                <option>HR Manager</option>
+                <option>Cleaner</option>
+            </select><br>
+            Birthday: <input type="text" name="year" size="1" value="Year"/>
+                      <input type="text" name="month" size="1" value="Month"/>
+                      <input type="text" name="day" size="1" value="Day"/><br>
+            Adres: <input type="text" name="adres"/><br>
+                   <input type="submit" value="create" />
+        </form>
+    </body>
+</html>

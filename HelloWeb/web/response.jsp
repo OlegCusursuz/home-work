@@ -1,3 +1,5 @@
+<%@page import="org.mypackage.hello.Num2"%>
+<%@page import="org.mypackage.hello.Num1"%>
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%-- 
     Document   : response
@@ -13,10 +15,9 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <jsp:useBean id="mybean" scope="session" class="org.mypackage.hello.NameHandler" />
-        <jsp:useBean id="mysurname" scope="page" class="org.mypackage.hello.SurnameHandler" />
-        <jsp:setProperty name="mybean" property="name" />
-        <jsp:setProperty name="mysurname" property="surname" />
-        <h1>Hello,<jsp:getProperty name="mybean" property="name" /> <jsp:getProperty name="mysurname" property="surname" /> !</h1>
+        <jsp:useBean id="add"  class="org.mypackage.hello.Main" />
+        <%int m = add.add(5);
+            out.print("cube of 5 is " + m);
+        %>
     </body>
 </html>
