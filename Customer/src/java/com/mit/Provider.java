@@ -10,7 +10,7 @@ package com.mit;
  * @author kusur
  */
 public interface Provider {
-    String username= "jdbc:postgresql://127.0.0.1:5432/empMeneger";
-    String pwd = "postgres";
-    String connURL = "root";
+   static final String DB_URL = "jdbc:postgresql://127.0.0.1:5432/empMeneger";
+    static final String DB_USER = "postgres";
+    static final String DB_PASS = "root";
 }

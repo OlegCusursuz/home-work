@@ -17,7 +17,7 @@
         <%
             int status = CustomerDAO.insertCustomer(obj);
             if (status > 0) {
-                out.println("Inserted successfully..");
+                out.println("Inserted successfully.."+obj.getName()+obj.getSurname()+obj.getPosition());
             } else {
                 out.println("Insertion Fail..");
             }

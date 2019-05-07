@@ -39,6 +39,7 @@ public class EmployeeDao {
         try (Connection conn = connect();
                 Statement dbStatement = conn.createStatement();
                 ResultSet rs = dbStatement.executeQuery(sql)) {
+            
             ArrayList<Employee> empList = new ArrayList<>();
             while (rs.next()) {
                 Employee emp = new Employee(rs.getInt("id"),

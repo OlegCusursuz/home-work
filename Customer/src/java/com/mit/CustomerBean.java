@@ -5,6 +5,7 @@
  */
 package com.mit;
 
+
 /**
  *
  * @author kusur
@@ -12,6 +13,17 @@ package com.mit;
 public class CustomerBean {
     private String name;
     private String surname;
+    private String position;
+    private String ldBirthday;
+    private String adres;
+    
+    public CustomerBean(String name,String surname, String position, String ldBirthday,String adres){
+        this.name = name;
+        this.surname = surname;
+        this.position = position;
+        this.ldBirthday = ldBirthday;
+        this.adres = adres;
+    }
 
     /**
      * @return the name
@@ -40,4 +52,48 @@ public class CustomerBean {
     public void setSurname(String surname) {
         this.surname = surname;
     }
+
+    /**
+     * @return the position
+     */
+    public String getPosition() {
+        return position;
+    }
+
+    /**
+     * @param position the position to set
+     */
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    /**
+     * @return the ldBirthday
+     */
+    public String getLdBirthday() {
+        return ldBirthday;
+    }
+
+    /**
+     * @param ldBirthday the ldBirthday to set
+     */
+    public void setLdBirthday(String ldBirthday) {
+        this.ldBirthday = ldBirthday;
+    }
+
+    /**
+     * @return the adres
+     */
+    public String getAdres() {
+        return adres;
+    }
+
+    /**
+     * @param adres the adres to set
+     */
+    public void setAdres(String adres) {
+        this.adres = adres;
+    }
+
+    
 }

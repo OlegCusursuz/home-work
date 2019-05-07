@@ -1,6 +1,6 @@
 <%-- 
     Document   : index
-    Created on : May 6, 2019, 9:05:39 PM
+    Created on : May 7, 2019, 12:13:33 PM
     Author     : kusur
 --%>
 
@@ -12,10 +12,17 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form name="f1" method="get" action="success.jsp">
-            Customer Name: <input type="text" name="name">
-            Customer Surname: <input type="text" name="surname">
-            <input type="submit" value="submit">
+        <form name="add" method="get" action="add.jsp">
+            Add Employee: <input type="submit" value="Add" /><br>
         </form>
+        
+        <form name="edit" action="edit.jsp">
+            Edit Employee: <input type="submit" value="Edit" /><br>
+        </form>
+        
+        <form name="delete" action="delete.jsp">
+            Delete Employee: <input type="submit" value="Delete" /><br>
+        </form>
+        
     </body>
 </html>
